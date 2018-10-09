@@ -6,10 +6,10 @@
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
    //รับข้อความจากผู้ใช้
-   $message = $arrayJIssueson['events'][0]['message']['text'];
+   //$message = $arrayJIssueson['events'][0]['message']['text'];
    //รับ id ของผู้ใช้
    $id = $arrayJson['events'][0]['source']['userId'];
-$message == "นับ 1-10"
+$message = "นับ 1-10"
    if($message == "นับ 1-10"){
        for($i=1;$i<=10;$i++){
           $arrayPostData['to'] = $id;
@@ -30,7 +30,6 @@ $message == "นับ 1-10"
       curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
       $result = curl_exec($ch);
       curl_close ($ch);
-      echo $result;
    }
    exit;
 ?>
