@@ -9,6 +9,7 @@
    $message = $arrayJIssueson['events'][0]['message']['text'];
    //รับ id ของผู้ใช้
    $id = $arrayJson['events'][0]['source']['userId'];
+$message == "นับ 1-10"
    if($message == "นับ 1-10"){
        for($i=1;$i<=10;$i++){
           $arrayPostData['to'] = $id;
